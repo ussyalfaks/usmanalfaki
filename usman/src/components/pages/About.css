@@ -1,0 +1,67 @@
+.Profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+ .wiz{
+    border-radius:500px;
+    position:relative;
+    top: -100px;
+    left: 140px;
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+}
+.add{
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid blue;
+    position: relative;
+    top: -270px;
+    left: 300px;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.acct-info{
+    margin-top: -90px;
+}
+.btn-follow{
+    margin-top: 10px;
+    background-color:blue;
+    color: white;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+.fans{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.name{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.post, .followers, .following, .acct-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.count{
+    font-size: large;
+    font-weight: 600;
+}
