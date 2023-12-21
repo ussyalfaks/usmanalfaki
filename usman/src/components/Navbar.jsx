@@ -64,7 +64,10 @@ const Navbar = () => {
             </li> */}
 
             <li className="md:mx-4 my-2 md:my-0">
-              <NavLink to="#" className=" bg-emerald-950 py-3 px-3 rounded-2xl text-white">Shop</NavLink>
+              <NavLink to="#"
+               className=" bg-emerald-950 py-3 px-3 rounded-2xl text-white">
+                Resume
+                </NavLink>
             </li>
           </ul>
         </div>
