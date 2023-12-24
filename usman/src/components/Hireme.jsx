@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Red from '../assets/red.svg'
 import Yellow from '../assets/yellow.svg'
@@ -9,6 +9,8 @@ function Contactme() {
   
 
   const form = useRef();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,10 +19,16 @@ function Contactme() {
     'template_yjhfye6', 
     form.current, 
     'rZGSfIDt7I17MWLFg')
-      .then((result) => {
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+          setIsSuccess(true);
+          setIsError(false);
+        },
+        (error) => {
           console.log(error.text);
+          setIsError(true);
+          setIsSuccess(false);
       });
 
  
@@ -118,7 +126,9 @@ function Contactme() {
             Send
           </button>
         </div>
-      </form>
+        {isSuccess && <p className='text-green-500'>Message sent successfully!</p>}
+          {isError && <p className='text-red-500'>Error sending message. Please try again.</p>}
+        </form>
     </div>
     </div>
   );
