@@ -41,16 +41,16 @@ const Navbar = () => {
   }, [menuOpen]);
 
   return (
-    <header className={` ${menuOpen ? 'h-screen' : ''} `}>
-      <nav className="flex md:flex-row justify-between px-10 pt-8 pb-3 mb-0">
-        <div className={`mb-4 md:mb-0 ${menuOpen ? 'md:text-center' : ''}`}>
+    <header className={` flex justify-between items-center  ${menuOpen ? 'h-screen max-md:flex max-md:items-start bg-slate-400' : ''} `}>
+      <nav className={`flex flex-row justify-between w-full h-full  px-10 pt-8 pb-3 mb-0 ${menuOpen? 'flex flex-col h-full ':''}`}>
+        <div className={`mb-4 md:mb-0 flex justify-start  ${menuOpen ? 'md:text-center text-white' : ''}`}>
           <Link to="/" className="Logo font-mono">
             DEVELOPEDBYUSMAN
           </Link>
         </div>
 
-        <div className="md:flex md:items-center md:justify-center items-center justify-center">
-          <ul className={`flex  ${menuOpen ? 'flex flex-col md:items-center justify-end mt-52' : 'hidden md:flex'} md:flex-row`}>
+        <div className={`md:flex md:items-center items-center ${menuOpen ? 'h-screen flex justify-center items-center' : ''}`}>
+          <ul className={`flex ${menuOpen ? 'flex flex-col items-center justify-center ' : 'max-md:hidden'} `}>
             <li className="md:mx-4 my-2 md:my-0">
               <NavLink to="/" className='hidden'>Home</NavLink>
             </li>
@@ -72,14 +72,16 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="md:hidden">
+       
+      </nav>
+
+      <div className={` ${menuOpen? 'p-7 px-4' :'md:hidden px-4'}`}>
           <FontAwesomeIcon
             icon={faBars}
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-2xl cursor-pointer"
+            className="text-2xl cursor-pointer "
           />
         </div>
-      </nav>
     </header>
   );
 };

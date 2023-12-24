@@ -1,40 +1,30 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Red from '../assets/red.svg'
 import Yellow from '../assets/yellow.svg'
 import Green from '../assets/green.svg'
 import Option from '../assets/options.svg'
 
 function Contactme() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+  
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const form = useRef();
 
-  const handleClear = () => {
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-  };
-
-  const handleSend = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Add your logic to handle sending the form data
-    console.log('Form data submitted:', formData);
-  };
 
+    emailjs.sendForm('service_h59batg', 
+    'template_yjhfye6', 
+    form.current, 
+    'rZGSfIDt7I17MWLFg')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+ 
+    };
   return (
     <div>
       
@@ -58,7 +48,8 @@ function Contactme() {
         </a>
       </div>
 
-      <form onSubmit={handleSend} className='w-full max-w-md p-4  max-md:px-12'>
+      <form  ref={form} onSubmit={sendEmail}
+      className='w-full max-w-md p-4  max-md:px-12'>
         <div className='mb-4'>
           <label htmlFor='name' className='block text-sm font-semibold text-gray-600'>
             Name
@@ -67,8 +58,6 @@ function Contactme() {
             type='text'
             id='name'
             name='name'
-            value={formData.name}
-            onChange={handleChange}
             className='w-full px-4 py-2 border-b-2 rounded focus:outline-none focus:border-blue-500'
             required
           />
@@ -82,8 +71,6 @@ function Contactme() {
             type='email'
             id='email'
             name='email'
-            value={formData.email}
-            onChange={handleChange}
             className='w-full px-4 py-2 border-b-2 rounded focus:outline-none focus:border-blue-500'
             required
           />
@@ -97,8 +84,6 @@ function Contactme() {
             type='text'
             id='subject'
             name='subject'
-            value={formData.subject}
-            onChange={handleChange}
             className='w-full px-4 py-2 border-b-2 rounded focus:outline-none focus:border-blue-500'
             required
           />
@@ -111,8 +96,6 @@ function Contactme() {
           <textarea
             id='message'
             name='message'
-            value={formData.message}
-            onChange={handleChange}
             rows='4'
             className='w-full px-4 py-2 border-b-2 rounded focus:outline-none focus:border-blue-500'
             required
@@ -120,15 +103,16 @@ function Contactme() {
         </div>
 
         <div className='flex justify-between'>
-          <button
+          {/* <button
             type='button'
             onClick={handleClear}
             className='px-4 py-2 text-sm text-white bg-[#2f404a] rounded-xl hover:bg-gray-600 focus:outline-none'
           >
             Clear
-          </button>
+          </button> */}
           <button
             type='submit'
+            value='send'
             className='px-4 py-2 text-sm text-white bg-[#427D9D] rounded-xl hover:bg-blue-600 focus:outline-none'
           >
             Send
