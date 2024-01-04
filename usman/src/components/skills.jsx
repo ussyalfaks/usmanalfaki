@@ -7,6 +7,9 @@ import Reactlogo from '../assets/react.svg';
 import Bootstrap from '../assets/bootstrap.svg';
 import Tailwind from '../assets/tailwindcss.svg';
 import Git from '../assets/git.svg';
+import Typescript from '../assets/typescript.svg';
+import Nextjs from '../assets/next.svg';
+import Wordpress from '../assets/wordpress.svg';
 
 function Skills() {
   const imageVariants = {
@@ -28,6 +31,9 @@ function Skills() {
     { src: Bootstrap, alt: 'Bootstrap' },
     { src: Tailwind, alt: 'Tailwind CSS' },
     { src: Git, alt: 'Git' },
+    { src: Typescript, alt: 'Typescript' },
+    { src: Nextjs, alt: 'Nextjs' },
+    { src: Wordpress, alt: 'Wordpress' },
   ];
 
   return (
@@ -37,7 +43,7 @@ function Skills() {
           <h1 className='font-bold text-2xl'>Skills:</h1>
         </div>
         <m.div
-          className='grid grid-cols-5 max-md:grid-cols-3 my-7 max-sm:w-full max-md:pl-5'
+          className='grid grid-cols-4 max-md:grid-cols-3  my-7 max-sm:w-full max-lg:pl-5'
           initial='hidden'
           animate='visible'
           transition={{ staggerChildren: 0.2 }}
@@ -49,11 +55,14 @@ function Skills() {
                 variants={imageVariants}
                 transition={imageTransition}
               >
+                <div className='flex justify-center items-center'>
                 <img
                   src={image.src}
                   className='w-12 lg:mx-10 cursor-pointer md:mx-10 my-5'
                   alt={image.alt}
                 />
+                <p className='text-sm max-md:px-3'>{image.alt}</p>
+                </div>
               </m.div>
             ))}
           </AnimatePresence>

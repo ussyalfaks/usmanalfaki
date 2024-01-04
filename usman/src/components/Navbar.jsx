@@ -2,10 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import resumeFile from '../../public/USMANResume.pdf';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resumeFile; 
+    link.download = 'USMANResume.pdf'; 
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+  }
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,9 +75,10 @@ const Navbar = () => {
               <NavLink to="/contact">Collection</NavLink>
             </li> */}
 
-            <li className="md:mx-4 my-2 md:my-0">
+            <li className="">
               <NavLink to="#"
-               className=" bg-emerald-950 py-3 px-3 rounded-2xl text-white">
+              onClick={downloadResume}
+               className=" bg-[#437D9D] p-3 rounded-2xl hover:border-blue-700 hover:border-2 text-white">
                 Resume
                 </NavLink>
             </li>

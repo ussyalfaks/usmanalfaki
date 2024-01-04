@@ -5,10 +5,10 @@ const SocialMediaIcons = () => {
   const openSocialMedia = (platform) => {
     // Replace the URLs with your social media profile links
     const socialMediaLinks = {
-      github: 'https://www.github.com/your-facebook-profile',
-      twitter: 'https://twitter.com/your-twitter-profile',
-      instagram: 'https://www.instagram.com/your-instagram-profile',
-      linkedin: 'https://www.linkedin.com/in/your-linkedin-profile',
+      github: 'https://usmanalfaki-1nwv.vercel.app/',
+      twitter: 'https://x.com/usman_alfaki?s=20',
+      instagram: 'https://www.instagram.com/u.abdulkadiir',
+      linkedin: 'https://www.linkedin.com/in/usman-abdulkadir-079344299/',
     };
 
     window.open(socialMediaLinks[platform], '_blank');
