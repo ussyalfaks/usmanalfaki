@@ -3,6 +3,7 @@ import Movie from '../assets/movie.png'
 import Store from '../assets/store.png'
 import Weather from '../assets/weather.png'
 import Gallery from '../assets/gall.png'
+import Cheesecake from '../assets/cheesecake.jpg'
 import { FaGithub} from 'react-icons/fa';
 
 export default function Project() {
@@ -15,17 +16,19 @@ export default function Project() {
                 <img src={Movie} className=' mb-6 rounded-xl' alt="" />
                 <div className='flex items-center justify-start mb-2'>
                     <button className='mx-2 py-2 px-4 bg-[#427D9D] hover:bg-blue-700 rounded-xl '>
-                        <a href="https://hngmovie-app.vercel.app/" target='_blank' className='text-white font-mono'>Live</a></button>
-                    <FaGithub className='cursor-pointer' size={25}/>
+                        <a href="https://hngmovie-app.vercel.app/" target='_blank'  rel="noreferrer" className='text-white font-mono'>
+                            Live</a></button>
+                            <a href="https://hngmovie-app.vercel.app/" target="_blank" rel=" noreferrer">
+                                <FaGithub className='cursor-pointer' size={25}/></a>
                 </div>
             </div>
-
             <div className='flex flex-col border-2 rounded-xl hover:shadow-2xl'>
                 <img src={Store} className='mb-6 rounded-xl' alt="" />
                 <div className='flex items-center justify-start mb-2'>
                     <button className='mx-2 py-2 px-4 bg-[#427D9D] hover:bg-blue-700 rounded-xl '>
-                        <a href="https://ussyalfaks.github.io/Store/" target='_blank' className='text-white font-mono'>Live</a></button>
-                    <FaGithub className='cursor-pointer' size={25}/>
+                        <a href="https://ussyalfaks.github.io/Store/" target='_blank' rel="noreferrer" className='text-white font-mono'>Live</a></button>
+                        <a href="https://github.com/ussyalfaks/Store" target="_blank" rel=" noreferrer">
+                                <FaGithub className='cursor-pointer' size={25}/></a>
                 </div>
             </div>
 
@@ -34,8 +37,11 @@ export default function Project() {
                 <img src={Weather} className='mb-6 rounded-xl' alt="" />
                 <div className='flex items-center justify-start mb-2'>
                     <button className='mx-2 py-2 px-4 bg-[#427D9D] hover:bg-blue-700 rounded-xl '>
-                        <a href="https://ussyalfaks.github.io/WEATHER-APP/" target='_blank' className='text-white font-mono'>Live</a></button>
+                        <a href="https://ussyalfaks.github.io/WEATHER-APP/" target='_blank' rel="noreferrer" className='text-white font-mono'>Live</a></button>
+                   
+                    <a href="https://github.com/ussyalfaks/WEATHER-APP" rel="noreferrer" >
                     <FaGithub className='cursor-pointer' size={25}/>
+                    </a>
                 </div>
             </div>
 
@@ -43,8 +49,21 @@ export default function Project() {
                 <img src={Gallery} className='mb-6 rounded-xl' alt="" />
                 <div className='flex items-center justify-start mb-2'>
                     <button className='mx-2 py-2 px-4 bg-[#427D9D] hover:bg-blue-700 rounded-xl '>
-                        <a href="https://drop-mu-nine.vercel.app/gallery" target='_blank' className='text-white font-mono'>Live</a></button>
+                        <a href="https://drop-mu-nine.vercel.app/gallery" target='_blank' rel="noreferrer" className='text-white font-mono'>Live</a></button>
+
+                    <a href="https://github.com/ussyalfaks/drop" rel="noreferrer" >
                     <FaGithub className='cursor-pointer' size={25}/>
+                    </a>
+                </div>
+            </div>
+
+            <div className='flex flex-col border-2 rounded-xl hover:shadow-2xl'>
+                <img src={Cheesecake} className='mb-6 rounded-xl' alt="" />
+                <div className='flex items-center justify-start mb-2'>
+                    <button className='mx-2 py-2 px-4 bg-[#427D9D] hover:bg-blue-700 rounded-xl '>
+                        <a href="https://cheesecake-ecru.vercel.app/" target='_blank' rel="noreferrer" className='text-white font-mono'>Live</a></button>
+                        <a href="https://github.com/ussyalfaks/Cheesecake" target="_blank" rel=" noreferrer">
+                                <FaGithub className='cursor-pointer' size={25}/></a>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import resumeFile from '../../public/USMANResume.pdf';
+import resumeFile from '../assets/USMANResume.pdf';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = resumeFile; 
-    link.download = 'USMANResume.pdf'; 
+    link.download = '/USMANResume.pdf?url'; 
     document.body.appendChild(link);
 
     link.click();
