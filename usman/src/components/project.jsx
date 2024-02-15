@@ -44,7 +44,7 @@ const projects = [
     title: 'Rent Home',
     image: Rentme,
     liveLink: 'https://rentals-rho.vercel.app/',
-    githubLink: 'https://github.com/ussyalfaks/Rentals/tree/main/rentme',
+    githubLink: 'https://github.com/ussyalfaks/Rentals',
   },
 ];
 
