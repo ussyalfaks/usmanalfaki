@@ -7,6 +7,7 @@ import Store from '../assets/store.png';
 import Weather from '../assets/weather.png';
 import Gallery from '../assets/gall.png';
 import Cheesecake from '../assets/cheesecake.jpg';
+import Rentme from '../assets/Rentme.jpg'
 
 const projects = [
   {
@@ -38,6 +39,12 @@ const projects = [
     image: Cheesecake,
     liveLink: 'https://cheesecake-ecru.vercel.app/',
     githubLink: 'https://github.com/ussyalfaks/Cheesecake',
+  },
+  {
+    title: 'Rent Home',
+    image: Rentme,
+    liveLink: 'https://rentals-rho.vercel.app/',
+    githubLink: 'https://github.com/ussyalfaks/Rentals/tree/main/rentme',
   },
 ];
 
