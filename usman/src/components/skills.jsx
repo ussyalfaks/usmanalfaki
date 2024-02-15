@@ -43,7 +43,7 @@ function Skills() {
           <h1 className='font-bold text-2xl'>Skills:</h1>
         </div>
         <m.div
-          className='grid grid-cols-4 max-md:grid-cols-3  my-7 max-sm:w-full max-lg:pl-5'
+          className='grid grid-cols-5 max-md:grid-cols-3 my-7 max-sm:w-full '
           initial='hidden'
           animate='visible'
           transition={{ staggerChildren: 0.2 }}
@@ -55,13 +55,13 @@ function Skills() {
                 variants={imageVariants}
                 transition={imageTransition}
               >
-                <div className='flex justify-center items-center'>
-                <img
-                  src={image.src}
-                  className='w-12 lg:mx-10 cursor-pointer md:mx-10 my-5'
-                  alt={image.alt}
-                />
-                <p className='text-sm max-md:px-3'>{image.alt}</p>
+                <div className='flex flex-col items-center'>
+                  <img
+                    src={image.src}
+                    className='w-12 h-12 lg:mx-10 cursor-pointer md:mx-10 my-5'
+                    alt={image.alt}
+                  />
+                  <p className='text-sm max-md:px-3'>{image.alt}</p>
                 </div>
               </m.div>
             ))}

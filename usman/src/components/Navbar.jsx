@@ -7,6 +7,8 @@ import resumeFile from '../assets/USMANResume.pdf';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+
+  
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = resumeFile; 
@@ -54,7 +56,7 @@ const Navbar = () => {
 
   return (
     <header className={` flex justify-between items-center  ${menuOpen ? 'h-screen max-md:flex max-md:items-start bg-slate-400' : ''} `}>
-      <nav className={`flex flex-row justify-between w-full h-full  px-10 pt-8 pb-3 mb-0 ${menuOpen? 'flex flex-col h-full ':''}`}>
+      <nav className={`flex justify-between w-full h-full  px-10 pt-8 pb-3 mb-0 ${menuOpen? 'flex flex-col h-full ':''}`}>
         <div className={`mb-4 md:mb-0 flex justify-start  ${menuOpen ? 'md:text-center text-white' : ''}`}>
           <Link to="/" className="Logo font-mono">
             DEVELOPEDBYUSMAN
