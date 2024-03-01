@@ -7,13 +7,14 @@ import Weather from '../assets/weather.png';
 import Gallery from '../assets/gall.png';
 import Cheesecake from '../assets/cheesecake.jpg';
 import Rentme from '../assets/Rentme.jpg'
+import Coffee from '../assets/coffee.jpg'
 
 const projects = [
   {
     title: 'Movie App',
     image: Movie,
-    liveLink: 'https://github.com/ussyalfaks/Moviee',
-    githubLink: 'https://moviee-git-main-ussyalfaks.vercel.app/',
+    liveLink: 'https://moviee-git-main-ussyalfaks.vercel.app/',
+    githubLink: 'https://github.com/ussyalfaks/Moviee',
   },
   {
     title: 'Store App',
@@ -23,9 +24,9 @@ const projects = [
   },
   {
     title: 'Coffee Site',
-    image: Store,
-    liveLink: 'https://github.com/ussyalfaks/coffeesite',
-    githubLink: 'https://coffeeborcelle-two.vercel.app/',
+    image: Coffee,
+    liveLink: 'https://coffeeborcelle-two.vercel.app/',
+    githubLink: 'https://github.com/ussyalfaks/coffeesite ',
   },
   {
     title: 'Weather App',
