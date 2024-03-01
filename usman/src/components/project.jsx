@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-// Import your image assets
 import Movie from '../assets/movie.png';
 import Store from '../assets/store.png';
 import Weather from '../assets/weather.png';
@@ -13,14 +12,20 @@ const projects = [
   {
     title: 'Movie App',
     image: Movie,
-    liveLink: 'https://hngmovie-app.vercel.app/',
-    githubLink: 'https://hngmovie-app.vercel.app/',
+    liveLink: 'https://github.com/ussyalfaks/Moviee',
+    githubLink: 'https://moviee-git-main-ussyalfaks.vercel.app/',
   },
   {
     title: 'Store App',
     image: Store,
     liveLink: 'https://ussyalfaks.github.io/Store/',
     githubLink: 'https://github.com/ussyalfaks/Store',
+  },
+  {
+    title: 'Coffee Site',
+    image: Store,
+    liveLink: 'https://github.com/ussyalfaks/coffeesite',
+    githubLink: 'https://coffeeborcelle-two.vercel.app/',
   },
   {
     title: 'Weather App',
