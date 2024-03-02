@@ -48,12 +48,11 @@ const Navbar = () => {
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-
     return () => {
       document.body.classList.remove('overflow-hidden');
     };
   }, [menuOpen]);
-
+  
   return (
     <header className={` flex justify-between items-center  ${menuOpen ? 'h-screen max-md:flex max-md:items-start bg-slate-400' : ''} `}>
       <nav className={`flex justify-between w-full h-full  px-10 pt-8 pb-3 mb-0 ${menuOpen? 'flex flex-col h-full ':''}`}>
@@ -62,13 +61,11 @@ const Navbar = () => {
             DEVELOPEDBYUSMAN
           </Link>
         </div>
-
         <div className={`md:flex md:items-center items-center ${menuOpen ? 'h-screen flex justify-center items-center' : ''}`}>
           <ul className={`flex ${menuOpen ? 'flex flex-col items-center justify-center ' : 'max-md:hidden'} `}>
             <li className="md:mx-4 my-2 md:my-0">
               <NavLink to="/" className='hidden'>Home</NavLink>
             </li>
-
             {/* <li className="md:mx-4 my-2 md:my-0">
               <NavLink to="/about">About</NavLink>
             </li>
@@ -76,7 +73,6 @@ const Navbar = () => {
             <li className="md:mx-4 my-2 md:my-0">
               <NavLink to="/contact">Collection</NavLink>
             </li> */}
-
             <li className="">
               <NavLink to="#"
               onClick={downloadResume}
@@ -86,10 +82,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-       
       </nav>
-
       <div className={` ${menuOpen? 'p-7 px-4' :'md:hidden px-4'}`}>
           <FontAwesomeIcon
             icon={faBars}

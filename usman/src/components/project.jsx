@@ -53,7 +53,6 @@ const projects = [
     githubLink: 'https://github.com/ussyalfaks/Rentals',
   },
 ];
-
 export default function Project() {
   return (
     <div>
