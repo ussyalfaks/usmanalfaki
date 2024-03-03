@@ -7,19 +7,14 @@ import resumeFile from '../assets/USMANResume.pdf';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
-  
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = resumeFile; 
     link.download = '/USMANResume.pdf?url'; 
     document.body.appendChild(link);
-
     link.click();
-
     document.body.removeChild(link);
   }
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,7 +64,6 @@ const Navbar = () => {
             {/* <li className="md:mx-4 my-2 md:my-0">
               <NavLink to="/about">About</NavLink>
             </li>
-
             <li className="md:mx-4 my-2 md:my-0">
               <NavLink to="/contact">Collection</NavLink>
             </li> */}
