@@ -53,7 +53,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 4 }}
+            transition={{ duration: 3 }}
           >
             <img
               src={Usman}
